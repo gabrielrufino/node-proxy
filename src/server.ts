@@ -6,9 +6,9 @@ import proxy from 'express-http-proxy';
 import helmet from 'helmet';
 import pino from 'pino-http';
 
-import { db } from './db.js';
-import { auth } from './middlewares/auth.middleware.js';
-import { Routers } from './routers/index.js';
+import { db } from './db';
+import { auth } from './middlewares/auth.middleware';
+import { Routers } from './routers';
 
 const { TOKEN } = process.env;
 

@@ -17,11 +17,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: satackey/action-docker-layer-caching@v0.0.11
         continue-on-error: true
-      - run: docker image build -t gabrielrufino/node-proxy:latest -t gabrielrufino/node-proxy:$(npm pkg get version | sed 's/"//g') .
+      - run: docker image build -t servicespack/proxies-api:latest -t servicespack/proxies-api:$(npm pkg get version | sed 's/"//g') .
       - run: docker login -u gabrielrufino -p ${{ secrets.DOCKER_HUB_TOKEN }}
-      - run: docker image push -a gabrielrufino/node-proxy
+      - run: docker image push -a servicespack/proxies-api
       - uses: peter-evans/dockerhub-description@v3
         with:
           username: gabrielrufino
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
-          repository: gabrielrufino/node-proxy
+          repository: servicespack/proxies-api

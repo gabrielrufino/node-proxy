@@ -1,4 +1,4 @@
-![Node Proxy](https://drive.google.com/uc?export=view&id=14dw6D75qaUuItbnmhNGg7wx9Eds_DiEm)
+# Proxies API
 
 ---
 
@@ -12,13 +12,13 @@
 
 Start a proxy usig docker:
 
-```bash
+```sh
 docker container run \
   -p 3000:3000 \
-  -v "node-proxy:/usr/src/app/" \
+  -v "proxies-api:/usr/src/app/" \
   -e NODE_ENV=production \
-  --name node-proxy \
-  gabrielrufino/node-proxy
+  --name proxies-api \
+  servicespack/proxies-api
 ```
 
 ## API

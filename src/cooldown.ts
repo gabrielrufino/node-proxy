@@ -1,5 +1,5 @@
-import { logger } from './logger.js';
-import { server } from './server.js';
+import { logger } from './logger';
+import { server } from './server';
 
 export async function cooldown() {
   logger.info('Shutting down Node Proxy');
